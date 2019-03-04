@@ -1,0 +1,11 @@
+:backends:
+  - consul
+
+:consul:
+  :host: 0.0.0.0
+  :port: 8500
+  :paths:
+    - /v1/kv/configuration/%{fqdn}
+    - /v1/kv/configuration/common
+    - /v1/catalog/service
+    - /v1/catalog/node
